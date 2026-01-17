@@ -190,3 +190,61 @@ $(function(){
   $('.navigation-close').hover(cursorhover,cursor);
 
 })
+
+// EmailJS Form Handler
+document.addEventListener('DOMContentLoaded', function() {
+  emailjs.init('ljoFC6O_5kKYc-4QB');
+  
+  var form = document.getElementById('myForm');
+  var submitBtn = document.getElementById('submit');
+  
+  if(form && submitBtn) {
+    submitBtn.onclick = function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      handleSubmit();
+      return false;
+    };
+    
+    form.onsubmit = function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      handleSubmit();
+      return false;
+    };
+  }
+  
+  function handleSubmit() {
+    var name = document.getElementById('name').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var subject = document.getElementById('subject').value.trim();
+    var message = document.getElementById('body').value.trim();
+    
+    if(!name || !email || !subject || !message) {
+      alert('Please fill out all fields');
+      return;
+    }
+    
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!emailPattern.test(email)) {
+      alert('Please enter a valid email address');
+      return;
+    }
+    
+    var templateParams = {
+      from_name: name,
+      from_email: email,
+      subject: subject,
+      message: message,
+      to_email: "rahuljha190802@gmail.com"
+    };
+    
+    emailjs.send("service_f4klrqn", "template_6jj8opo", templateParams)
+      .then(function(response) {
+        alert('Message sent successfully!');
+        document.getElementById('myForm').reset();
+      }, function(error) {
+        alert('Failed to send message. Please try again.');
+      });
+  }
+});;

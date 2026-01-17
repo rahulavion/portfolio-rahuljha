@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/index.css">
     <!--main css file-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.11.0/dist/index.min.js"></script>
 </head>
 <body>
     <!--contains all the div-->
@@ -78,7 +80,7 @@
                 <div class="firstline"><span class="color">Rahul Kumar </span>Jha</div>
                 <div class="secondline">
                 I'm a
-            <span class="txt-rotate color" data-period="1200"data-rotate='[ "Computer Science Engineer" , "Software Engineer In Test" , "Quality Engineer", " Python Programmer."]'></span>
+            <span class="txt-rotate color" data-period="1200"data-rotate='[ "Computer Science Engineer" , "Software Development Engineer In Test" , "Quality Engineer", " Python Programmer."]'></span>
             <span class="slash">|</span>
         </div>
                     <div class="contact">
@@ -562,14 +564,14 @@
                  <div class="form-header">
                      Message Me
                  </div>
-                 <form id="myForm" action="mailto:rahulkumarjha.cs20@bitsathy.ac.in" method="post" enctype="text/plain">
+                 <form id="myForm">
                     <div class="input-line">
                         <input  id="name" type="text" placeholder="Name" class="input-name">
                         <input id="email" type="email" placeholder="Email"  class="input-name">
                     </div>
                     <input type="text" id="subject" placeholder="subject" class="input-subject">
                     <textarea id ="body" class="input-textarea" placeholder="message"></textarea>
-                    <button type="button" id ="submit" value="send">Submit</button>
+                    <button type="submit" id ="submit" value="send">Submit</button>
                  </form>
 
              </div>
