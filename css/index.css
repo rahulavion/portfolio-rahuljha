@@ -499,6 +499,7 @@ body{
     height:380px;
     padding: 30px;
     border-radius: 40px;
+    object-fit: contain;
 }
 .about-img {
     width: 550px;
@@ -718,7 +719,7 @@ body{
     align-items: center;
     justify-content: center;
     transition: all .4s ease;
-    width:83%;
+    width:100%;
     border-radius: 10px;
     background: #c70039;
 }
