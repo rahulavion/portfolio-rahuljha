@@ -437,6 +437,34 @@ body{
         transform: scale(1);
     }
 }
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Image */
+.about-img img {
+    width: 320px;
+    border-radius: 12px;
+}
+
+/* Content */
+.about-content {
+    flex: 1;
+}
+
+.about-first-line {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.about-second-line {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555;
+}
+
 #about-content{
     display: flex;
     flex-direction:column;
@@ -1378,6 +1406,15 @@ For devices with smaller width like mobile phone
         float: right;
         height: auto;
         width: 0%;   
+    }
+  .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img img {
+        width: 100%;
+        max-width: 350px;
     }
     .social-media-links{
         width: 100%;
@@ -2563,3 +2600,4 @@ for tabs and large phones
         transition: all .4s ease;
     }
 }
+
